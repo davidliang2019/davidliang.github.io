@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab12</title>
+<style>
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+</style>
+
+<script src="jquery-3.3.1.js"></script>
+
+<script>
+$.ajaxSetup({
+  url: 'http://www2.cs.uregina.ca/~liang12l/JQuery/lab12q.php',
+  type: 'post',
+  dataType: 'json',
+  success: displayJsonData,
+  error: printerror
+});
+
+$(document).ready(function(){
+    $("#Add").click(function(){
+        var data1 =
+        {
+            Add: $('input[name=Add]').val(),
+            LastName: $('input[name=LastName]').val(),
+            FirstName: $('input[name=FirstName]').val(),
+            ID: $('input[name=ID]').val()	
+        };
+        $.ajax({data:data1});
+    });
+
+    $("#Query").click(function(){
+        var data2 =  
+        {
+            Query: $('input[name=Query]').val(),
+            SearchName: $('input[name=SearchName]').val(),
+            radioButton: $('input:radio[name=radioButton]:checked').val()
+        };
+        $.ajax({data:data2});     
+    });
+});
+
+function displayJsonData(array)
+{
+    if(array.select == "Add"){
+        $("#tbodyResult").html(array.query + "<br>" + array.message);
+        return;
+    }
+    var text = array.query 
+        + "<br>" + array.message
+        + "<h1>Query results</h1>"
+        + "<table><tr>"
+        + "<td>ID</td>"
+        + "<td>First Name</td>"
+        + "<td>Last Name</td></tr>";
+    for(i = 0; i < array.ID.length; i++)
+        text += "<tr><td>" + array.ID[i] + "</td>"
+            + "<td>" + array.FirstName[i] + "</td>"
+            + "<td>" + array.LastName[i] + "</td></tr>";
+    text += "</table>";
+    $("#tbodyResult").html(text);
+}
+
+function printerror() {
+    $("#tbodyResult").html(array.error);
+}
+</script>
+</head>
+
+<body>
+<h1>Add a Record</h1>
+<table>
+<tr><td>ID:</td><td><input type="text" name="ID"/></td></tr>
+<tr><td>First Name:</td><td><input type="text" name="FirstName"/></td></tr>
+<tr><td>Last Name:</td><td><input type="text" name="LastName"/></td></tr>
+<tr><td colspan="2"><input type = "button" name="Add" id = "Add" value = "Add"/></td></tr>
+</table>
+
+<h1>Query the Database (Enter * to see all)</h1>
+<table>
+<tr><td>Search for:</td><td><input type="text" name = "SearchName" /></td></tr>
+<tr><td>Field:</td><td>
+<input type="radio" name="radioButton" value="ID" />ID
+<input type="radio" name="radioButton" value="FirstName" />First Name
+<input type="radio" name="radioButton" value="LastName" checked="checked"/>Last Name</td>
+<tr><td colspan="2"><input type = "button" name="Query" id = "Query" value = "Query"/></td></tr>
+</table>
+
+<section id="tbodyResult"></section>
+
+<p>
+<a href="http://validator.w3.org/check?uri=referer">
+      <img src="http://www.w3.org/Icons/valid-xhtml10"
+       alt="Valid XHTML 1.0 Strict" height="31" width="88"/>
+</a>
+</p>
+
+</body>
+</html>
