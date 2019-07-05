@@ -38,11 +38,11 @@
                     <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Work Samples</b></p>
                      <div id="menubar">
                          <ul id="menulist">
-                             <li class="menuitem" onclick="selectProject()">Social Network
-                             <li class="menuitem" onclick="selectProject()">Education
-                             <li class="menuitem" onclick="selectProject()">Secured Communication
-                             <li class="menuitem" onclick="selectProject()">Pickup Game
-                             <li class="menuitem" onclick="selectProject()">Database System
+                             <li class="menuitem" onclick="selectProject(1)">Social Network
+                             <li class="menuitem" onclick="selectProject(2)">Education
+                             <li class="menuitem" onclick="selectProject(3)">Secured Communication
+                             <li class="menuitem" onclick="selectProject(4)">Pickup Game
+                             <li class="menuitem" onclick="selectProject(5)">Database System
                          </ul>
                      </div>
                      <br><br><br><br><br><br><br>
@@ -152,6 +152,14 @@
     <p>Using template from w3.css</p>
     <p>Modified by David Liang</p>
 </footer>
-
+    <script>
+        function selectProject(number){
+            switch(number){
+                case 1: location.replace("https://www.w3schools.com");
+                    break;
+                default:
+            }
+        }
+    </script>
 </body>
 </html>
