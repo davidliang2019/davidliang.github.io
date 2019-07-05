@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html>
+<title>David Liang's Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="profile/width=device-width, initial-scale=1">
+<link rel="stylesheet" href="profile/w3_resume_template.css">
+<link rel='stylesheet' href='profile/google_font_roboto.css'>
+<link rel='stylesheet' href='profile/stylesheet.css'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+<style>
+    html, body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Roboto", sans-serif
+    }
+</style>
+<body class="w3-light-grey">
+
+    <!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+    <!-- The Grid -->
+    <div class="w3-row-padding">
+
+        <!-- Left Column -->
+        <div class="w3-third">
+
+            <div class="w3-white w3-text-grey w3-card-4">
+                <div class="w3-display-container">
+                    <img src="profile/davidliang.jpg" style="width:100%" alt="Avatar">
+                </div>
+                <div class="w3-container">
+                    <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Active Job Seeker</p>
+                    <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Richmond, BC, Canada</p>
+                    <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>lingfeng2200@gmail.com</p>
+                    <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>Home: (604)227-3269</p>
+                    <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>Cell/Text: (306)737-1819</p>
+                    <hr>
+
+                    <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Projects</b></p>
+                     <div id="menubar">
+                         <ul id="menulist">
+                             <li class="menuitem" onclick="selectProject()">Social Network
+                             <li class="menuitem" onclick="selectProject()">Education
+                             <li class="menuitem" onclick="selectProject()">Secured Communication
+                             <li class="menuitem" onclick="selectProject()">Pickup Game
+                             <li class="menuitem" onclick="selectProject()">Database System
+                         </ul>
+                     </div>
+                     <br><br><br><br><br><br><br>
+                        <hr>
+
+                     <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+                     <p>English</p>
+                     <div class="w3-light-grey w3-round-xlarge">
+                         <div class="w3-round-xlarge w3-teal" style="height:24px;width:80%"></div>
+                     </div>
+                     <p>Mandarin</p>
+                     <div class="w3-light-grey w3-round-xlarge">
+                         <div class="w3-round-xlarge w3-teal" style="height:24px;width:70%"></div>
+                     </div>
+                     <p>Cantonese</p>
+                     <div class="w3-light-grey w3-round-xlarge">
+                         <div class="w3-round-xlarge w3-teal" style="height:24px;width:60%"></div>
+                     </div>
+                     <br>
+                </div>
+            </div><br>
+
+            <!-- End Left Column -->
+        </div>
+
+        <!-- Right Column -->
+        <div class="w3-twothird">
+
+            <div class="w3-container w3-card w3-white w3-margin-bottom">
+                <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+                <div class="w3-container">
+                    <h5 class="w3-opacity"><b>Junior Programmer (internship) / Aten Canada, Richmond BC Canada</b></h5>
+                    <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2019 - Mar 2019</h6>
+                    <ul>
+                        <li>Constructed a UI to test the KVM project using C#</li>
+                        <li>Motivated a DLL to aid a user need</li>
+                        <li>Created a video recorder using MFC</li>
+                    </ul>
+                    <hr>
+                </div>
+                <div class="w3-container">
+                    <h5 class="w3-opacity"><b>Data Analyst / Ministry of Education, Regina SK Canada</b></h5>
+                    <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2013 - Aug 2013</h6>
+                    <ul>
+                        <li>Retrieved data from the Oracle Database system</li>
+                        <li>Constructed some advance queries using relational algebra with the MS SQL</li>
+                        <li>Found an implicit trend for all public schools using regression analyze with MS Excel</li>
+                        <li>Commented on the classes selection using covariance matrix analyze with R</li>
+                    </ul>
+                    <hr>
+                </div>
+                <div class="w3-container">
+                    <h5 class="w3-opacity"><b>Data Analyst / Treaty 4 Student Success Program, Fort Qu'Appelle SK Canada</b></h5>
+                    <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2010 - Sep 2011</h6>
+                    <ul>
+                        <li>Collected data for 18 aboriginal schools from K to 12</li>
+                        <li>Constructed a data visualization using MS Excel</li>
+                        <li>Developed educational assessment reports from existing data</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="w3-container w3-card w3-white">
+                <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+                <div class="w3-container">
+                    <h5 class="w3-opacity"><b>University of Regina, Regina SK Canada</b></h5>
+                    <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2016 - 2018</h6>
+                    <p>Master of Science, Computer Science(course-based, GPA: 86.3%)</p>
+                    <hr>
+                </div>
+                <div class="w3-container">
+                    <h5 class="w3-opacity"><b>University of Regina, Regina SK Canada</b></h5>
+                    <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2005 - 2008</h6>
+                    <p>Master of Science, Statistics​(thesis-based, GPA: 83.6%)</p>
+                    <hr>
+                </div>
+                <div class="w3-container">
+                    <h5 class="w3-opacity"><b>University of Regina, Regina SK Canada</b></h5>
+                    <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2003 - 2005</h6>
+                    <p>Bachelor of Science, Actuarial Science ​(GPA: 85.9%)<br />
+                       Minor: Mathematics<br />
+                       Achievement: Great Distinction<br />
+                        </p>
+                </div>
+            </div>
+
+            <!-- End Right Column -->
+        </div>
+
+        <!-- End Grid -->
+    </div>
+
+    <!-- End Page Container -->
+</div>
+
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+    <p>Using template from w3.css</p>
+    <p>Modified by David Liang</p>
+</footer>
+
+</body>
+</html>
