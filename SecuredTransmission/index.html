@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+article {
+	border-style: ridge;
+	padding-left: 30px;
+	padding-bottom: 10px;
+}
+textarea {
+    width: 90%;
+    height: 150px;
+}
+input.key{ width: 50%;}
+input.off { width: 10%;}
+</style>
+<script type="text/javascript" src="cryptograph.js"> </script>
+</head>
+
+<body>
+
+<article>
+<h1>Sender</h1>
+<section id = "sender">
+<p>Plaintext:<br><textarea id="data" oninput="count(this)"></textarea>
+	<br><span id = "showNumber"></span></p>
+<p>Key: <input type="text" class="key" id="sender_key"
+value = "ABCDEF0123456789ABC2017200226302"></p>
+<p>offset value: <input type="text" class="off" id="sender_offset" value = 2></p>
+<button type="button" onclick="splitText()">Start</button>
+with translating plaintext into ASCII code and split
+</section>
+</article>
+
+<article>
+<h1>Receiver</h1>
+<section id = "receiver">
+<p>Key: <input type="text" class="key" id="receiver_key"
+value = "ABCDEF0123456789ABC2017200226302"></p>
+<p>offset value: <input type="text" class="off" id="receiver_offset" value = 2></p>
+<input type="radio"  name = "selection" id = "case1" checked="checked"/>
+	Case 1: packets received sequence is 0, 1, 2, 3, ...<br>
+<input type="radio"  name = "selection" id = "case2" />
+	Case 2: packets received sequence is 1, 0, 3, 2, ...<br>
+<input type="radio"  name = "selection" id = "case3" />
+	Case 3: packets received sequence is ..., 3, 2, 1, 0<br>
+<input type="radio"  name = "selection" id = "case4" />
+	Case 4: packets received sequence is random<br>
+
+</section>
+</article>
+
+<p><a href="report.pdf">report</a></p>
+
+</body>
+</html>
