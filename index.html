@@ -12,7 +12,8 @@
         font-family: "Roboto", sans-serif
     }
     ul{
-        max-height: 200px;
+        max-height: 300px;
+        overflow: auto;
     }
 </style>
 <body class="w3-light-grey">
@@ -36,6 +37,7 @@
                     <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>lingfeng2200@gmail.com</p>
                     <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>Home: (604)227-3269</p>
                     <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>Cell/Text: (306)737-1819</p>
+                    <p><i class="fa fa-globe fa-fw w3-margin-right w3-large w3-text-teal"></i>Languages: English, Cantonese, Mandarin
                     <hr>
 
                     <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Work Samples</b></p>
@@ -43,25 +45,20 @@
                          <ul id="menulist">
                              <li class="menuitem" onclick="selectProject(1)">JQuery
                              <li class="menuitem" onclick="selectProject(2)">Secured Transmission
-                             <li class="menuitem" onclick="selectProject(3)">Secured Communication
-                             <li class="menuitem" onclick="selectProject(4)">Pickup Game
-                             <li class="menuitem" onclick="selectProject(5)">Database System
                          </ul>
                      </div>
-                     <hr>
-
-                     <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
-                     <p>English</p>
-                     <div class="w3-light-grey w3-round-xlarge">
-                         <div class="w3-round-xlarge w3-teal" style="height:24px;width:80%"></div>
-                     </div>
-                     <p>Mandarin</p>
-                     <div class="w3-light-grey w3-round-xlarge">
-                         <div class="w3-round-xlarge w3-teal" style="height:24px;width:70%"></div>
-                     </div>
-                     <p>Cantonese</p>
-                     <div class="w3-light-grey w3-round-xlarge">
-                         <div class="w3-round-xlarge w3-teal" style="height:24px;width:60%"></div>
+                     <br>
+                    
+                     <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Presentation</b></p>
+                     <div id="menubar">
+                         <ul id="menulist">
+                             <li class="menuitem" onclick="selectProject(3)">Most Probable Configuration
+                             <li class="menuitem" onclick="selectProject(4)">Bayesion Network
+                             <li class="menuitem" onclick="selectProject(5)">Dynamic Programming
+                             <li class="menuitem" onclick="selectProject(6)">Game Design
+                             <li class="menuitem" onclick="selectProject(7)">Semanic Web design
+                             <li class="menuitem" onclick="selectProject(8)">Negative Association
+                         </ul>
                      </div>
                      <br>
                 </div>
@@ -160,6 +157,18 @@
                 case 1: location.replace("http://www2.cs.uregina.ca/~liang12l/JQuery");
                     break;
                 case 2: location.replace("SecuredTransmission");
+                    break;
+                case 3: location.replace("http://www2.cs.uregina.ca/~liang12l/Presentation/MostProbableConfig.pdf");
+                    break;
+                case 4: location.replace("http://www2.cs.uregina.ca/~liang12l/Presentation/BayesianNetwork.pdf");
+                    break;
+                case 5: location.replace("http://www2.cs.uregina.ca/~liang12l/Presentation/LongestSegment.pdf");
+                    break;
+                case 6: location.replace("http://www2.cs.uregina.ca/~liang12l/Presentation/GameManage.pdf");
+                    break;
+                case 7: location.replace("http://www2.cs.uregina.ca/~liang12l/Presentation/SemanicWeb.pdf");
+                    break;
+                case 8: location.replace("http://www2.cs.uregina.ca/~liang12l/Presentation/NARandamVariable.pdf");
                     break;
                 default:
             }
