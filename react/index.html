@@ -26,7 +26,7 @@ class MyForm extends React.Component {
   }
   mySubmitHandler = (event) => {
     event.preventDefault();
-    console.log("You are submitting " + this.state.username);
+    alert("You are submitting " + this.state.username);
   }
   myChangeHandler = (event) => {
     this.setState({username: event.target.value});
