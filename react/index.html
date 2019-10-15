@@ -26,6 +26,17 @@ class DisplayName extends React.Component {
   }
 }
 
+class InputName extends React.Component {
+  render() {
+    return (
+      <div className="form-group">
+        <label for="name">Name</label>
+        <input id="name" value={this.props.name} onChange={this.props.onChange} />
+      </div>
+    );
+  }
+}
+
 class MyForm extends React.Component {
   constructor(props) {
     super(props);
@@ -42,14 +53,9 @@ class MyForm extends React.Component {
     return (
       <form onSubmit={this.mySubmitHandler}>
       <p>Enter your name, and submit:</p>
-      <input
-        type='text'
-        onChange={this.myChangeHandler}
-      />
+      <InputName name={this.state.username} onChange={this.myChangeHandler} />
       <DisplayName name={this.state.username} />
-      <input
-        type='submit'
-      />
+      <input type='submit'/>
       </form>
     );
   }
