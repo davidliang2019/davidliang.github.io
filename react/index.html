@@ -31,18 +31,25 @@ class MyForm extends React.Component {
     super(props);
     this.state = { username: '' };
   }
+  mySubmitHandler = (event) => {
+    event.preventDefault();
+    alert("You are submitting " + this.state.username);
+  }
   myChangeHandler = (event) => {
     this.setState({username: event.target.value});
   }
   render() {
     return (
-      <form>
-      <p>Enter your name:</p>
+      <form onSubmit={this.mySubmitHandler}>
+      <p>Enter your name, and submit:</p>
       <input
         type='text'
         onChange={this.myChangeHandler}
       />
       <DisplayName name={this.state.username} />
+      <input
+        type='submit'
+      />
       </form>
     );
   }
