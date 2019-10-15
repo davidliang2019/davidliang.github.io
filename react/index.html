@@ -19,30 +19,30 @@ class Header extends React.Component {
       );
     }
   }
+  
+class DisplayName extends React.Component {
+  render() {
+    return <p>You are entering <span style={{color:"blue"}}>{this.props.name}</span></p>;
+  }
+}
+
 class MyForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = { username: '' };
-  }
-  mySubmitHandler = (event) => {
-    event.preventDefault();
-    alert("You are submitting " + this.state.username);
   }
   myChangeHandler = (event) => {
     this.setState({username: event.target.value});
   }
   render() {
     return (
-      <form onSubmit={this.mySubmitHandler}>
-      <p>Enter your name, and submit:</p>
+      <form>
+      <p>Enter your name:</p>
       <input
-        type="text"
+        type='text'
         onChange={this.myChangeHandler}
       />
-      <input
-        type="submit"
-      />
-      <p>You have entered <span style={{color:"blue"}}>{this.state.username}</span></p>
+      <DisplayName name={this.state.username} />
       </form>
     );
   }
